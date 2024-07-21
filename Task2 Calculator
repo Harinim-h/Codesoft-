@@ -1,0 +1,35 @@
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error: Division by zero is not allowed"
+    return x / y
+
+print("Select operation.")
+print("Addition")
+print("Subtraction")
+print("Multiplication")
+print("Division")
+
+choice = input("Enter choice(Add/Sub/Mul/Div): ")
+
+if choice in ('Add', 'Sub', 'Mul', 'Div'):
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    if choice == 'Add':
+        print(num1, "+", num2, "=", add(num1, num2))
+    elif choice == 'Sub':
+        print(num1, "-", num2, "=", subtract(num1, num2))
+    elif choice == 'Mul':
+        print(num1, "*", num2, "=", multiply(num1, num2))
+    elif choice == 'Div':
+        print(num1, "/", num2, "=", divide(num1, num2))
